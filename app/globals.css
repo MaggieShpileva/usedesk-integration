@@ -1,0 +1,87 @@
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  max-width: 480px;
+  min-height: 100vh;
+  margin: auto;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+#usedesk-messenger #uw-main-button,
+#uw-main-button-close {
+  display: none !important;
+}
+
+#usedesk-messenger .uw__messenger-layout__frame {
+  width: 100%;
+  max-width: 480px;
+  position: fixed;
+  bottom: 100px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+}
+
+#usedesk-messenger .uw__widget-layout {
+  margin: 0 20px;
+  animation: 0.15s ease 0s 1 normal none running iJbSFy !important;
+}
+
+#usedesk-messenger .uw__widget-layout__content {
+  height: 250px;
+}
+
+#usedesk-messenger .uw__header {
+  position: relative;
+  background: #343434 !important;
+}
+
+#usedesk-messenger .uw__header::before {
+  position: absolute;
+  content: "";
+  left: 30px;
+  top: auto;
+  height: 26px;
+  width: 156px;
+  background-image: url("../public/logo.svg");
+  background-size: cover;
+}
